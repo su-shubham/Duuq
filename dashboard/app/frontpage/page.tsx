@@ -1,6 +1,8 @@
-import React from 'react'
-import { Button } from '@/components/ui/button'
-import { Input } from '@/components/ui/input'
+'use client';
+import React from 'react';
+import { Button } from '@/components/ui/button';
+import { Input } from '@/components/ui/input';
+import Link from 'next/link';
 
 export default function Homepage() {
   return (
@@ -9,9 +11,9 @@ export default function Homepage() {
         <div className="flex items-center space-x-4">
           <div className="font-bold text-xl">Duuq</div>
           <nav className="hidden md:flex space-x-4">
-            <a href="#pricing" className="text-foreground/60 hover:text-foreground">Pricing</a>
-            <a href="#blog" className="text-foreground/60 hover:text-foreground">Blog</a>
-            <a href="#contact" className="text-foreground/60 hover:text-foreground">Contact</a>
+            <Link href="#pricing" className="text-foreground/60 hover:text-foreground">Pricing</Link>
+            <Link href="#blog" className="text-foreground/60 hover:text-foreground">Blog</Link>
+            <Link href="#contact" className="text-foreground/60 hover:text-foreground">Contact</Link>
           </nav>
         </div>
         <div className="flex items-center space-x-4">
@@ -28,12 +30,16 @@ export default function Homepage() {
           Generate Images, Text and Videos with AI
         </h1>
         <p className="mx-auto mb-10 max-w-2xl text-foreground/60">
-          Everything AI seamlessly integrated all the modern AI generation tools
+          Everything AI seamlessly integrates all modern AI generation tools
           into one platform so that you can generate content with a single click.
         </p>
         <div className="flex justify-center space-x-4">
-          <Button size="lg">Get started</Button>
-          <Button size="lg" variant="outline">Contact us</Button>
+          <Link href="/video">
+            <Button size="lg">Get started</Button>
+          </Link>
+          <Link href="/contact">
+            <Button size="lg" variant="outline">Contact us</Button>
+          </Link>
         </div>
       </main>
 
@@ -47,7 +53,7 @@ export default function Homepage() {
             "Built-in moderation",
             "Easy to use interface",
             "24/7 Customer Support",
-            "Money back guarantee",
+            "Money-back guarantee",
             "Data privacy focus"
           ].map((feature, index) => (
             <div key={index} className="flex items-center space-x-3 rounded-lg border p-4">
@@ -75,9 +81,9 @@ export default function Homepage() {
 
       <section className="bg-muted py-16">
         <div className="container mx-auto px-4 text-center">
-          <h2 className="mb-4 text-3xl font-bold">Ready to signup and join the waitlist?</h2>
+          <h2 className="mb-4 text-3xl font-bold">Ready to sign up and join the waitlist?</h2>
           <p className="mb-8 text-foreground/60">
-            Get instant access to our state of the art project and join the waitlist.
+            Get instant access to our state-of-the-art project and join the waitlist.
           </p>
           <div className="flex justify-center">
             <div className="flex w-full max-w-sm items-center space-x-2">
@@ -88,5 +94,5 @@ export default function Homepage() {
         </div>
       </section>
     </div>
-  )
+  );
 }

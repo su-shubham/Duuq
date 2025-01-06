@@ -1,5 +1,5 @@
 import Image from "next/image";
-import LiveVideoPlayerUI from "./component/home";
+import LiveVideoPlayerUI from "./video/page";
 
 export default function Home() {
   return (
